@@ -174,7 +174,13 @@ class ConvertCocoPolysToMask(object):
     
         return image, target
 
-
+mscoco_category2name = {
+    1: 'Pole_Upper',
+    2: 'Pole_Bottom',
+    3: 'Trunk_Upper',
+    4: 'Trunk_Bottom',
+}
+'''
 mscoco_category2name = {
     1: 'person',
     2: 'bicycle',
@@ -257,6 +263,6 @@ mscoco_category2name = {
     89: 'hair drier',
     90: 'toothbrush'
 }
-
+'''
 mscoco_category2label = {k: i for i, k in enumerate(mscoco_category2name.keys())}
 mscoco_label2category = {v: k for k, v in mscoco_category2label.items()}

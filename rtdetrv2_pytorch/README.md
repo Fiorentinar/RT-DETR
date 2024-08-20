@@ -151,3 +151,7 @@ If you use `RTDETR` or `RTDETRv2` in your work, please use the following BibTeX 
 }
 ```
 </details>
+
+
+
+CUDA_VISIBLE_DEVICES=0,1 torchrun --master_port=9909 --nproc_per_node=2 tools/train.py -c configs/rtdetrv2_pole/rtdetrv2_r50vd_6x_coco.yml -t pretrained/rtdetrv2_r50vd_6x_coco_ema.pth --use-amp --seed=0 &> log.txt
